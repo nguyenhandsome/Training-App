@@ -204,8 +204,8 @@ using namespace std;
 
 int main (int argc, char** argv)
 {
-    cout<<"Hello, C++";
-    return 0;
+cout<<"Hello, C++";
+return 0;
 }
 ```
 
@@ -250,12 +250,12 @@ int main (int argc, char** argv)
 using namespace std;
 int main ()
 {
-    char Ten[100];
-    cout<<"nhap ten cua ban";
-    cout<<endl;
-    cin>>Ten;
-    cout<<"your name is "<<Ten<<endl;
-    return 0;
+char Ten[100];
+cout<<"nhap ten cua ban";
+cout<<endl;
+cin>>Ten;
+cout<<"your name is "<<Ten<<endl;
+return 0;
 }
 ```
 **End**
@@ -293,28 +293,28 @@ int main ()
 
 ***Tại sao phải chuyển kiểu***
 
-      - Trong quá trình tính toán đôi khi kết quả trả về không còn giống với kiểu dữ liệu chỉ định ban đầu nên ta cần ép kiểu
-      -  **Có 2 cách chuyển dữ liệu**
-         - Ck rộng
-         - Ck hẹp
+- Trong quá trình tính toán đôi khi kết quả trả về không còn giống với kiểu dữ liệu chỉ định ban đầu nên ta cần ép kiểu
+-  **Có 2 cách chuyển dữ liệu**
+- Ck rộng
+- Ck hẹp
 
 - a) Chuyễn kiểu rộng
-      - **Nới rộng (widening)**: Là quá trình làm tròn số từ kiểu dữ liệu có kích thước nhỏ hơn sang kiểu có kích thước lớn hơn. Kiểu biến đổi này không làm mất thông tin. Ví dụ chuyển từ int sang float. Chuyển kiểu loại này có thế được thực hiện ngầm định bởi trình biên dịch.
+- **Nới rộng (widening)**: Là quá trình làm tròn số từ kiểu dữ liệu có kích thước nhỏ hơn sang kiểu có kích thước lớn hơn. Kiểu biến đổi này không làm mất thông tin. Ví dụ chuyển từ int sang float. Chuyển kiểu loại này có thế được thực hiện ngầm định bởi trình biên dịch.
 
 *VD*
 ```
 #include <iostream>
- 
+
 using namespace std;
-  
+
 int main() {
-    int i = 100;
-    long l = i;    // khong yeu cau chi dinh ep kieu
-    float f = l;   // khong yeu cau chi dinh ep kieu
-    cout << "Gia tri Int: " << i << endl;
-    cout << "Gia tri Long: " << l << endl;
-    cout << "Gia tri Float: " << f << endl;
-    return 0;
+int i = 100;
+long l = i;    // khong yeu cau chi dinh ep kieu
+float f = l;   // khong yeu cau chi dinh ep kieu
+cout << "Gia tri Int: " << i << endl;
+cout << "Gia tri Long: " << l << endl;
+cout << "Gia tri Float: " << f << endl;
+return 0;
 }
 ```
 
@@ -327,22 +327,22 @@ Giá trị Float:  100
 ```
 
 - b) Chuyển kiểu hẹp
-       - **Thu hẹp (narrowwing)**: Là quá trình làm tròn số từ kiểu dữ liệu có kích thước lớn hơn sang kiểu có kích thước nhỏ hơn. Kiểu biến đổi này có thể làm mất thông tin như ví dụ ở trên. Chuyển kiểu loại này không thể thực hiện ngầm định bởi trình biên dịch, người dùng phải thực hiện chuyển kiểu tường minh.
+- **Thu hẹp (narrowwing)**: Là quá trình làm tròn số từ kiểu dữ liệu có kích thước lớn hơn sang kiểu có kích thước nhỏ hơn. Kiểu biến đổi này có thể làm mất thông tin như ví dụ ở trên. Chuyển kiểu loại này không thể thực hiện ngầm định bởi trình biên dịch, người dùng phải thực hiện chuyển kiểu tường minh.
 
 **VD**
 ```
 #include <iostream>
- 
+
 using namespace std;
-  
+
 int main() {
-    double d = 100.04;
-    long l = (long) d; // yeu cau chi dinh kieu du lieu (long)
-    int i = (int) l; // yeu cau chi dinh kieu du lieu (int)
-    cout << "Gia tri Double: " << d << endl;
-    cout << "Gia tri Long: " << l << endl;
-    cout << "Gia tri Int: " << i << endl;
-    return 0;
+double d = 100.04;
+long l = (long) d; // yeu cau chi dinh kieu du lieu (long)
+int i = (int) l; // yeu cau chi dinh kieu du lieu (int)
+cout << "Gia tri Double: " << d << endl;
+cout << "Gia tri Long: " << l << endl;
+cout << "Gia tri Int: " << i << endl;
+return 0;
 }
 ```
 
@@ -381,15 +381,15 @@ Giá trị Int:  100
 using namespace std;
 int main()
 {
-    int r;
-    double p,s;
-    cout<<"nhap ban kinh cua hinh tron"<<endl;
-    cin>>r;
-    p = 2*M_PI*r;
-    s = M_PI*r*r;
-    cout<<"chu vi la "<<p<<endl;
-    cout<<"dien tich la "<<s<<endl;
-    return 0;
+int r;
+double p,s;
+cout<<"nhap ban kinh cua hinh tron"<<endl;
+cin>>r;
+p = 2*M_PI*r;
+s = M_PI*r*r;
+cout<<"chu vi la "<<p<<endl;
+cout<<"dien tich la "<<s<<endl;
+return 0;
 }
 ```
 **End**
@@ -406,18 +406,18 @@ using namespace std;
 //Cho so giay in ra gio phut giay trong ngay
 int main(int argc, char** argv)
 {
-    int t;
-    int h,m,s;
-    cout<<"nhap so giay bat ky"<<endl;
-    cin>>t;
-    h = (t/3600)%24;
-    m = (t%3600)/60;
-    s = (t%3600)%60;
-    int hourtemp;
-    hourtemp = h>12?h-12:h;
-    cout<<hourtemp<<":"<<m<<":"<<s<< (h>12?"PM":"AM")<<endl;
-    return 0;
-    
+int t;
+int h,m,s;
+cout<<"nhap so giay bat ky"<<endl;
+cin>>t;
+h = (t/3600)%24;
+m = (t%3600)/60;
+s = (t%3600)%60;
+int hourtemp;
+hourtemp = h>12?h-12:h;
+cout<<hourtemp<<":"<<m<<":"<<s<< (h>12?"PM":"AM")<<endl;
+return 0;
+
 }
 ```
 **End**
@@ -435,18 +435,18 @@ using namespace std;
 
 int main(int argc, char** argv)
 {
-    float t,l,h;
-    float tb;
-    cout<<"nhap diem toan"<<endl;
-    cin>>t;
-    cout<<"nhap diem ly"<<endl;
-    cin>>l;
-    cout<<"nhap diem hoa"<<endl;
-    cin>>h;
-    tb = (t+l+h)/3;
-    cout<<"diem trung binh la = "<<tb<<endl;
-    cout<<"diem trung binh lam tron la = "<<setprecision(3)<<tb<<endl;
-    return 0;
+float t,l,h;
+float tb;
+cout<<"nhap diem toan"<<endl;
+cin>>t;
+cout<<"nhap diem ly"<<endl;
+cin>>l;
+cout<<"nhap diem hoa"<<endl;
+cin>>h;
+tb = (t+l+h)/3;
+cout<<"diem trung binh la = "<<tb<<endl;
+cout<<"diem trung binh lam tron la = "<<setprecision(3)<<tb<<endl;
+return 0;
 }
 ```
 
@@ -464,16 +464,16 @@ using namespace std;
 
 int main(int argc, char** argv)
 {
-    char n;
-    int a;
-    cout<<"nhap vao mot ky tu bat ki"<<endl;
-    cin>>n;
-    int m=n;
-    cout<<"Ma ASCII cua "<< n <<" la "<<m<<endl;
-    a=(int)n+1;
-    char b = a;
-    cout<<"ky tu ke tiep cua "<<n<<" la "<<b<<endl;
-    return 0;
+char n;
+int a;
+cout<<"nhap vao mot ky tu bat ki"<<endl;
+cin>>n;
+int m=n;
+cout<<"Ma ASCII cua "<< n <<" la "<<m<<endl;
+a=(int)n+1;
+char b = a;
+cout<<"ky tu ke tiep cua "<<n<<" la "<<b<<endl;
+return 0;
 }
 ```
 
@@ -487,16 +487,16 @@ using namespace std;
 
 int main(int argc, char** argv)
 {
-    int n;
-    float x;
-    float A;
-    cout<<"nhap so"<<endl;
-    cin>>x;
-    cout<<"nhap so mu"<<endl;
-    cin>>n;
-    A = pow(pow(x,2)+x+1,n)+pow(pow(x,2)-x+1,n);
-    cout<<"ket qua la "<< A <<endl;
-    return 0;
+int n;
+float x;
+float A;
+cout<<"nhap so"<<endl;
+cin>>x;
+cout<<"nhap so mu"<<endl;
+cin>>n;
+A = pow(pow(x,2)+x+1,n)+pow(pow(x,2)-x+1,n);
+cout<<"ket qua la "<< A <<endl;
+return 0;
 }
 ```
 
@@ -510,16 +510,16 @@ using namespace std;
 
 int main(int argc, char** argv)
 {
-    int n,m;
-    int a,b;
-    double d;
-    cout<<"nhap hoanh do tung do tai toa do A"<<endl;
-    cin>>n>>m;
-    cout<<"nhap hoanh do tung do tai toa do B"<<endl;
-    cin>>a>>b;
-    d = sqrt(pow(m-n,2)+pow(b-a,2));
-    cout<<"do dai 2 doan AB la "<<d<<endl;
-    return 0;
+int n,m;
+int a,b;
+double d;
+cout<<"nhap hoanh do tung do tai toa do A"<<endl;
+cin>>n>>m;
+cout<<"nhap hoanh do tung do tai toa do B"<<endl;
+cin>>a>>b;
+d = sqrt(pow(m-n,2)+pow(b-a,2));
+cout<<"do dai 2 doan AB la "<<d<<endl;
+return 0;
 }
 ```
 
@@ -532,20 +532,20 @@ using namespace std;
 
 int main(int argc, char** argv)
 {
-    int n;
-    int a,b,c;
-    cout<<"nhap mot so nguyen co 3 chu so"<<endl;
-    cin>>n;
-    int temp=n;
-    a=n%10;
-    n=n/10;
-    b=n%10;
-    n=n/10;
-    c=n%10;
-    n=n/10;
-    cout<<"so dao nguoc cua "<<temp<<" la "<<a<<b<<c<<endl;
-    
-    return 0;
+int n;
+int a,b,c;
+cout<<"nhap mot so nguyen co 3 chu so"<<endl;
+cin>>n;
+int temp=n;
+a=n%10;
+n=n/10;
+b=n%10;
+n=n/10;
+c=n%10;
+n=n/10;
+cout<<"so dao nguoc cua "<<temp<<" la "<<a<<b<<c<<endl;
+
+return 0;
 }
 ```
 
